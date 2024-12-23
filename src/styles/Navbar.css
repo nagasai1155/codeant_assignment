@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem; /* Space around content */
-  background-color: #ffffff; /* White background for a clean look */
+  background-color: #fffefe; /* White background for a clean look */
   border-bottom: 1px solid #e0e0e0; /* Subtle bottom border */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
   position: fixed; /* Sticks to the top */

@@ -1,39 +1,151 @@
-
+/* Base styling */
 .signin-container {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .auth-tabs {
-    display: flex;
-    justify-content: center;
-    margin: 1rem 0;
-  }
-  
-  .auth-tabs button {
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .auth-tabs .active-tab {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .auth-options button {
-    display: block;
-    width: 300px;
-    margin: 0.5rem auto;
-    padding: 0.7rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .auth-options button:hover {
-    background-color: #f1f1f1;
-  }
-  
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 60px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.auth-tabs button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-tabs button.active-tab {
+  background-color: #0056b3;
+}
+
+.auth-tabs button:hover {
+  background-color: #0056b3;
+}
+
+/* Analytics Section */
+.analytics-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.analytics-card, .issues-fixed-card {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.analytics-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.analytics-card ul li {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.issues-fixed-card {
+  text-align: center;
+}
+
+.issues-fixed {
+  margin-bottom: 10px;
+}
+
+.issues-fixed p {
+  font-size: 14px;
+  color: #555;
+}
+
+.issues-fixed h3 {
+  font-size: 24px;
+  margin: 5px 0;
+  color: #007bff;
+}
+
+.this-week {
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.this-week p {
+  font-size: 12px;
+  margin: 0;
+  color: #777;
+}
+
+.this-week h4 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #28a745;
+}
+
+/* Auth Options */
+.auth-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.auth-options button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-options button:hover {
+  background-color: #0056b3;
+}
+
+.auth-options button:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+p {
+  font-size: 12px;
+  color: #666;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}

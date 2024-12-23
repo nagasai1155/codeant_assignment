@@ -1,14 +1,16 @@
 /* Repository List Styling */
 .repo-list {
   display: flex; /* Flex layout for alignment */
-  flex-wrap: wrap; /* Allow wrapping of cards */
-  justify-content: center; /* Center align cards horizontally */
-  align-items: center; /* Center align cards vertically */
-  margin: 0 auto; /* Center the container */
-  padding: 20px; /* Add spacing around the list */
-  max-width: 1200px; /* Limit width for better layout */
-  height: 100vh; /* Full viewport height */
+  flex-direction: column; /* Arrange cards vertically */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center; /* Center cards horizontally */
+ 
+  padding: 10px; /* Decreased spacing around the list */
+  gap: 0px; /* Reduced gap between items */
+  max-width: 1800px; /* Limit width for better layout */
+  height: auto; /* Adjust height to fit content */
   box-sizing: border-box; /* Include padding in height */
+  margin-right:240px;
 }
 
 /* Ensure the list is centered on the page */

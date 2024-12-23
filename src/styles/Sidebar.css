@@ -1,8 +1,8 @@
 /* Sidebar Styling */
 .sidebar {
-  width: 250px; /* Fixed width */
+  width: 200px; /* Fixed width */
   height: calc(100vh - 60px); /* Full height minus navbar height (adjust as needed) */
-  background-color: #2c3e50; /* Dark blue-grey for a professional look */
+  background-color: #dee1e4; /* Dark blue-grey for a professional look */
   color: white; /* White text for contrast */
   position: fixed; /* Stays in place */
   top: 60px; /* Push the sidebar below the navbar */
@@ -29,7 +29,7 @@
 }
 
 .sidebar-menu li a {
-  color: white; /* Text color */
+  color: rgb(26, 17, 17); /* Text color */
   text-decoration: none; /* No underline */
   display: flex; /* Flexbox for icon + text */
   align-items: center;
@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   padding: 10px 0; /* Space between support/logout links */
-  color: white; /* White text */
+  color: rgb(28, 24, 24); /* White text */
   text-decoration: none; /* No underline */
   font-size: 0.9rem;
   border-top: 1px solid #34495e; /* Divider */

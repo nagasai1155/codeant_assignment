@@ -1,39 +1,94 @@
-/* Repository Card Styling */
+/* Repository Card Container */
 .repo-card {
-  background-color: #f8f9fa; /* Light background */
-  border: 1px solid #e1e4e8; /* Subtle border */
+  background-color: #ffffff; /* White background */
+  border: 1px solid #e1e4e8; /* Light border */
   border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  padding: 20px; /* Internal spacing */
-  margin: 15px; /* Spacing between cards */
-  max-width: 400px; /* Limit card width */
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Hover effect */
+  padding: 16px; /* Internal spacing */
+  margin-top: 0px;
+  width:600px; /* Space between cards */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; /* Hover effect */
+}
+.container{
+  margin-top:150px;
 }
 
 .repo-card:hover {
-  transform: translateY(-5px); /* Lift the card slightly */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  transform: translateY(-2px); /* Lift slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Highlight shadow */
+}
+
+/* Repository Header */
+.repo-header {
+  display: flex; /* Align name and visibility */
+  justify-content: space-between; /* Push items to edges */
+  align-items: center; /* Vertically align items */
+  margin-bottom: 8px; /* Space below the header */
 }
 
 .repo-name {
-  font-size: 1.25rem; /* Slightly larger font for the name */
-  font-weight: bold; /* Emphasize name */
-  margin-bottom: 10px; /* Spacing below the name */
-  color: #333; /* Dark text */
+  font-size: 1.25rem; /* Larger text for the name */
+  font-weight: bold; /* Bold font for emphasis */
+  color: #0366d6; /* GitHub blue */
+  margin: 0; /* Remove default margin */
 }
 
+.repo-visibility {
+  font-size: 0.875rem; /* Smaller text size */
+  font-weight: 500; /* Semi-bold for clarity */
+  padding: 4px 8px; /* Internal spacing */
+  border-radius: 12px; /* Pill-shaped */
+  text-transform: capitalize; /* Ensure 'Public' or 'Private' is capitalized */
+}
+
+.repo-visibility.public {
+  background-color: #e3fcef; /* Light green background */
+  color: #28a745; /* Green text */
+}
+
+.repo-visibility.private {
+  background-color: #f3f4f6; /* Light gray background */
+  color: #6a737d; /* Gray text */
+}
+
+/* Repository Details */
 .repo-details {
-  font-size: 0.9rem; /* Smaller font for details */
-  color: #555; /* Subtle color */
-  display: flex; /* Flexbox layout for alignment */
-  flex-wrap: wrap; /* Allow wrapping for small screens */
-  gap: 10px; /* Spacing between items */
+  display: flex; /* Inline-flex for alignment */
+  gap: 12px; /* Space between items */
+  font-size: 0.875rem; /* Smaller text size */
+  color: #586069; /* Subtle gray text */
 }
 
-.repo-details span {
-  background-color: #e9ecef; /* Light background for labels */
-  border-radius: 4px; /* Rounded labels */
-  padding: 5px 10px; /* Internal spacing for labels */
+.repo-language {
+  display: flex; /* Align dot and text */
+  align-items: center; /* Center vertically */
+  gap: 4px; /* Space between dot and text */
+}
+
+.language-dot {
+  width: 8px; /* Small circle size */
+  height: 8px; /* Same as width for a perfect circle */
+  background-color: #0366d6; /* Default blue */
+  border-radius: 50%; /* Makes it circular */
+}
+
+/* Adjust color for languages dynamically (Example) */
+.repo-language:contains("JavaScript") .language-dot {
+  background-color: #f1e05a;
+}
+
+.repo-language:contains("Python") .language-dot {
+  background-color: #3572a5;
+}
+
+.repo-language:contains("Java") .language-dot {
+  background-color: #b07219;
+}
+
+.repo-size {
   white-space: nowrap; /* Prevent text wrapping */
-  font-size: 0.85rem; /* Smaller label font size */
+}
+
+.repo-updated {
+  white-space: nowrap; /* Prevent text wrapping */
 }
