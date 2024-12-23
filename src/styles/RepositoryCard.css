@@ -1,16 +1,39 @@
+/* Repository Card Styling */
 .repo-card {
-    padding: 1rem;
-    margin: 1rem 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: white;
-  }
-  .repo-name {
-    font-size: 1.2rem;
-    margin: 0;
-  }
-  .repo-details span {
-    margin-right: 1rem;
-    color: #555;
-  }
-  
+  background-color: #f8f9fa; /* Light background */
+  border: 1px solid #e1e4e8; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 20px; /* Internal spacing */
+  margin: 15px; /* Spacing between cards */
+  max-width: 400px; /* Limit card width */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Hover effect */
+}
+
+.repo-card:hover {
+  transform: translateY(-5px); /* Lift the card slightly */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.repo-name {
+  font-size: 1.25rem; /* Slightly larger font for the name */
+  font-weight: bold; /* Emphasize name */
+  margin-bottom: 10px; /* Spacing below the name */
+  color: #333; /* Dark text */
+}
+
+.repo-details {
+  font-size: 0.9rem; /* Smaller font for details */
+  color: #555; /* Subtle color */
+  display: flex; /* Flexbox layout for alignment */
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  gap: 10px; /* Spacing between items */
+}
+
+.repo-details span {
+  background-color: #e9ecef; /* Light background for labels */
+  border-radius: 4px; /* Rounded labels */
+  padding: 5px 10px; /* Internal spacing for labels */
+  white-space: nowrap; /* Prevent text wrapping */
+  font-size: 0.85rem; /* Smaller label font size */
+}

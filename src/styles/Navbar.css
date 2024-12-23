@@ -1,17 +1,90 @@
+/* Navbar Styling */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; /* Space around content */
+  background-color: #ffffff; /* White background for a clean look */
+  border-bottom: 1px solid #e0e0e0; /* Subtle bottom border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  position: fixed; /* Sticks to the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensures navbar stays on top of other elements */
+  height: 60px; /* Fixed height */
+}
+
+/* Navbar Title/Brand */
+.navbar h1 {
+  font-size: 1.5rem; /* Adjust font size */
+  font-weight: bold;
+  color: #333; /* Neutral color for text */
+  letter-spacing: 0.5px; /* Subtle spacing for elegance */
+  margin: 0; /* Remove default margin */
+}
+
+/* Navbar Links */
+.navbar li {
+  display: inline; /* Display links inline */
+  margin: 0 15px; /* Space between links */
+  list-style: none; /* Remove bullet points */
+}
+
+.navbar a {
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Standard font size */
+  color: #007bff; /* Blue for links */
+  font-weight: 500;
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.navbar a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* Add Repository Button */
+.add-repo-btn {
+  background-color: #007bff; /* Primary blue */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  padding: 0.5rem 1rem; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Standard font size */
+  font-weight: 600; /* Slightly bold text */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+.add-repo-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.add-repo-btn:active {
+  background-color: #003f7f; /* Even darker blue on click */
+  transform: translateY(0); /* Reset lift effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 1rem; /* Adjust padding */
   }
+
+  .navbar h1 {
+    margin-bottom: 1rem; /* Add space below the title */
+  }
+
+  .navbar li {
+    margin: 0 10px 10px 0; /* Adjust link spacing */
+  }
+
   .add-repo-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
+    align-self: flex-start; /* Align button to the left */
+    margin-top: 10px; /* Add space above the button */
   }
-  
+}

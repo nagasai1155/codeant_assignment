@@ -1,5 +1,28 @@
+/* Repository List Styling */
 .repo-list {
-    padding: 1rem;
-    flex: 1;
-  }
-  
+  display: flex; /* Flex layout for alignment */
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  justify-content: center; /* Center align cards horizontally */
+  align-items: center; /* Center align cards vertically */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add spacing around the list */
+  max-width: 1200px; /* Limit width for better layout */
+  height: 100vh; /* Full viewport height */
+  box-sizing: border-box; /* Include padding in height */
+}
+
+/* Ensure the list is centered on the page */
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: 'Arial', sans-serif; /* Clean font */
+  background-color: #f4f5f7; /* Light background */
+  display: flex; /* Flexbox for full-page alignment */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: 100vh; /* Full height for the viewport */
+}
+
+.repo-list::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for aesthetics */
+}
