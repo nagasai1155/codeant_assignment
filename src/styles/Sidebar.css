@@ -1,171 +1,50 @@
-/* Sidebar Styling */
+/* General Sidebar Styling */
 .sidebar {
-  width: 250px; /* Fixed width */
-  height: calc(100vh - 60px); /* Full height minus navbar height */
-  background-color: #dee1e4; /* Background color */
-  position: fixed; /* Stays in place */
-  top: 60px; /* Below the navbar */
+  width: 250px; /* Default width */
+  height: calc(100vh - 60px); /* Full height minus navbar */
+  background-color: #dee1e4; /* Sidebar background */
+  position: fixed; /* Fixed to the side */
+  top: 60px; /* Below navbar */
   left: 0;
-  padding-top: 20px; /* Top padding */
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  overflow-y: auto; /* Scrollable if content exceeds height */
-  z-index: 999; /* Stays above other elements */
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  padding-top: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
+  overflow-y: auto; /* Scrollable content */
+  z-index: 999;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for sliding */
 }
 
 /* Sidebar Menu */
 .sidebar-menu {
-  list-style: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.sidebar-menu li {
-  padding: 15px 20px; /* Space around menu items */
-  border-bottom: 1px solid #34495e; /* Subtle divider */
-  display: flex;
-  align-items: center; /* Vertically aligns icons and text */
-}
-
-.sidebar-menu li a {
-  color: rgb(26, 17, 17); /* Text color */
-  text-decoration: none; /* No underline */
-  display: flex; /* Flexbox for icon + text */
-  align-items: center;
-  font-size: 1rem; /* Standard font size */
-  font-weight: 500;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
-}
-
-/* Sidebar Logo */
-.sidebar-logo {
-  width: 24px; /* Size of the icons */
-  height: 24px;
-  margin-right: 10px; /* Space between icon and text */
-}
-
-/* Hover Effect for Menu Items */
-.sidebar-menu li a:hover {
-  background-color: #34495e; /* Slightly darker background on hover */
-  color: #1abc9c; /* Light green text */
-  border-radius: 4px; /* Rounded hover effect */
-}
-
-/* Sidebar Bottom Section */
-.sidebar-bottom {
-  position: absolute;
-  bottom: 20px; /* Space from the bottom */
-  width: 100%; /* Full width */
-  padding: 0 20px; /* Padding for alignment */
-}
-
-.sidebar-link {
-  display: flex;
-  align-items: center;
-  padding: 10px 0; /* Space between support/logout links */
-  color: rgb(28, 24, 24); /* Text color */
-  text-decoration: none; /* No underline */
-  font-size: 0.9rem;
-  border-top: 1px solid #34495e; /* Divider */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Hover transition */
-}
-
-.sidebar-link:hover {
-  background-color: #34495e; /* Hover background */
-  color: #1abc9c; /* Light green hover text */
-  border-radius: 4px;
-}
-
-/* Content Area (For Alignment with Sidebar) */
-.main-content {
-  margin-left: 200px; /* Space for the sidebar */
-  padding: 20px; /* Content padding */
-  transition: margin-left 0.3s ease; /* Smooth transition for collapsing sidebar */
-}
-
-/* Sidebar Hidden for Mobile */
-.sidebar {
-  transform: translateX(-250px); /* Initially hidden */
-  transition: transform 0.3s ease-in-out;
-}
-
-.sidebar.open {
-  transform: translateX(0); /* Slide in when open */
-}
-
-/* Sidebar Toggle Button */
-.sidebar-toggle {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1001; /* Above the sidebar */
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.sidebar-toggle:hover {
-  background-color: #0056b3;
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 200px; /* Adjusted width for smaller screens */
-    transform: translateX(-250px); /* Initially hidden */
-  }
-
-  .sidebar.open {
-    transform: translateX(0); /* Slide in when open */
-  }
-
-  .main-content {
-    margin-left: 0; /* Full-width content when sidebar is hidden */
-  }
-}
-
-/* Toggle Button */
-.sidebar-toggle {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1001; /* Above the sidebar */
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.sidebar-toggle:hover {
-  background-color: #0056b3;
-}
-
-/* Sidebar Menu Items */
 .sidebar-menu li {
   padding: 15px 20px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #34495e;
   display: flex;
   align-items: center;
 }
 
 .sidebar-menu li a {
-  color: #333;
+  color: rgb(26, 17, 17);
   text-decoration: none;
   display: flex;
   align-items: center;
   font-size: 1rem;
+  font-weight: 500;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Sidebar Logo */
+.sidebar-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Sidebar Hover Effect */
 .sidebar-menu li a:hover {
   background-color: #34495e;
   color: #1abc9c;
@@ -175,7 +54,7 @@
 /* Sidebar Bottom Section */
 .sidebar-bottom {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   width: 100%;
   padding: 0 20px;
 }
@@ -184,9 +63,10 @@
   display: flex;
   align-items: center;
   padding: 10px 0;
-  color: #333;
+  color: rgb(28, 24, 24);
   text-decoration: none;
   font-size: 0.9rem;
+  border-top: 1px solid #34495e;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -196,44 +76,93 @@
   border-radius: 4px;
 }
 
+/* Sidebar Hidden (Mobile) */
+.sidebar {
+  transform: translateX(-250px); /* Hidden initially */
+}
 
+.sidebar.open {
+  transform: translateX(0); /* Sidebar shown when open */
+}
 
-/* Laptop Screens */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* Content Area */
+.main-content {
+  margin-left: 250px; /* Adjusted for the sidebar */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
   .sidebar {
-    width: 180px; /* Slightly narrower sidebar */
-    margin-top: 60px;
+    width: 200px; /* Smaller sidebar width for mobile */
+  }
+
+  .sidebar.open {
+    transform: translateX(0); /* Show sidebar on open */
   }
 
   .main-content {
-    margin-left: 180px; /* Adjust content margin for sidebar width */
+    margin-left: 0; /* Content full width when sidebar is hidden */
+  }
+}
+
+/* Tablet / Small Laptop Screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: 180px; /* Adjust width */
+    margin-top: 50px; /* Space for the navbar */
+  }
+
+  .main-content {
+    margin-left: 180px; /* Adjust content space */
   }
 
   .sidebar-menu li {
-    padding: 12px 18px; /* Adjust spacing for smaller screens */
+    padding: 12px 18px; /* Adjust padding */
   }
 
   .sidebar-menu li a {
-    font-size: 0.9rem; /* Adjust font size */
+    font-size: 0.9rem; /* Slightly smaller font */
   }
 }
 
 /* Desktop Screens */
 @media (min-width: 1025px) {
   .sidebar {
-    width: 250px; /* Wider sidebar for larger screens */
-    margin-top:60px;
+    width: 250px; /* Sidebar width for large screens */
+    margin-top: 38px; /* Adjust for navbar */
   }
 
   .main-content {
-    margin-left: 250px; /* Adjust content margin for wider sidebar */
+    margin-left: 250px; /* Content space for large sidebar */
   }
 
   .sidebar-menu li {
-    padding: 20px 25px; /* Increase padding for larger screens */
+    padding: 20px 25px; /* Larger padding for desktop */
   }
 
   .sidebar-menu li a {
-    font-size: 1.1rem; /* Larger font size for text */
+    font-size: 1.1rem; /* Larger font for desktop */
   }
 }

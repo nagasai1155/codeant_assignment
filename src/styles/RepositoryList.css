@@ -4,19 +4,19 @@
   flex-direction: column; /* Arrange cards vertically */
   justify-content: flex-start; /* Align items at the top */
   align-items: center; /* Center cards horizontally */
- 
-  padding: 10px; /* Decreased spacing around the list */
-  gap: 0px; /* Reduced gap between items */
+  
+  padding: 40px; /* Decreased spacing around the list */
+  gap: 10px; /* Added gap between list items (adjust as needed) */
   max-width: 1800px; /* Limit width for better layout */
   height: auto; /* Adjust height to fit content */
   box-sizing: border-box; /* Include padding in height */
-  margin-right:240px;
+  margin-right: 240px;
 }
 
 /* Ensure the list is centered on the page */
 body {
   margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  padding: 20px; /* Remove default padding */
   font-family: 'Arial', sans-serif; /* Clean font */
   background-color: #f4f5f7; /* Light background */
   display: flex; /* Flexbox for full-page alignment */
@@ -25,6 +25,7 @@ body {
   min-height: 100vh; /* Full height for the viewport */
 }
 
+/* Hide scrollbar for aesthetics */
 .repo-list::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for aesthetics */
+  display: none;
 }
